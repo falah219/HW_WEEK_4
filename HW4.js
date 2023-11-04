@@ -6,13 +6,13 @@ let ganjil = 0;
 let genap = 0;
 
 while (array.length < 100) {
-    const randomNumber = Math.floor(Math.random() * 50) + 1; 
+    const random = Math.floor(Math.random() * 50) + 1; 
 
-    if ((randomNumber % 2 === 0) && ganjil < 100 / 2) {
-        array.push(randomNumber); 
+    if ((random % 2 !== 0) && ganjil < 50) {
+        array.push(random); 
         ganjil++;
-    } else if ((randomNumber % 2 !== 0) && genap < 100 / 2) {
-        array.push(randomNumber); 
+    } else if ((random % 2 === 0) && genap < 50) {
+        array.push(random); 
         genap++;
     }
 }
